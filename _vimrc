@@ -51,3 +51,7 @@ set softtabstop=4 " 1. space deleted when typing <BackSpace>
 " show tabs
 set listchars=tab:>.
 set list
+
+" ---------- python dev env -----------
+" autocmd BufWritePost *.py call Flake8()
+let g:flake8_max_complexity=10
