@@ -8,7 +8,10 @@ if has("autocmd")
     filetype plugin indent on
 endif
 
-colorscheme desert
+" 256 color theme molokai
+set t_Co=256
+colorscheme molokai
+
 set nu
 set history=50      " keep 50 lines of command line history
 
