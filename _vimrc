@@ -55,3 +55,9 @@ set list
 " ---------- python dev env -----------
 " autocmd BufWritePost *.py call Flake8()
 let g:flake8_max_complexity=10
+
+if has('unix')
+    autocmd filetype python map <F5> :!python %<CR>
+elseif has('win32')
+    autocmd filetype python map <F5> :!python.exe %<CR>
+endif
