@@ -9,8 +9,12 @@ if has("autocmd")
 endif
 
 " 256 color theme molokai
-set t_Co=256
-colorscheme molokai
+if has('unix')
+    set t_Co=256
+    colorscheme molokai
+elseif has('win32')
+    colorscheme desert
+endif
 
 set nu
 set history=50      " keep 50 lines of command line history
