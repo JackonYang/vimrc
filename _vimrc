@@ -66,3 +66,11 @@ if has('unix')
 elseif has('win32')
     autocmd filetype python map <F5> :!python.exe %<CR>
 endif
+
+" ---------- cpp dev env ------------------
+autocmd filetype cpp map <F7> :!g++ -o main %<CR>
+if has('unix')
+    autocmd filetype cpp map <F5> :!./main<CR>
+elseif has('win32')
+    autocmd filetype cpp map <F5> :!main.exe<CR>
+endif
