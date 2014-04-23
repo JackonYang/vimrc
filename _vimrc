@@ -74,3 +74,5 @@ if has('unix')
 elseif has('win32')
     autocmd filetype cpp map <F5> :!main.exe<CR>
 endif
+
+autocmd filetype make set noexpandtab
