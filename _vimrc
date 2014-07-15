@@ -60,6 +60,10 @@ set list
 " -------------- ctags ----------------
 set tags=tags;  " ; 不可省略，表示若当前目录不存在 tags，则在父目录找
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+" ------------- taglist ---------------
+let Tlist_Exit_OnlyWindow=1  " exit vim when taglist is last window
+let Tlist_File_Fold_Auto_Close=1  " fold tags of other windows
+" let Tlist_Inc_Winwidth=0  " terminal/console version can't change the window width
 
 " ---------- python dev env -----------
 " autocmd BufWritePost *.py call Flake8()
