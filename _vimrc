@@ -58,6 +58,9 @@ set listchars=tab:>.
 set list
 
 " -------------- ctags ----------------
+if has('win32')
+    let Tlist_Ctags_Cmd='$HOME\vimfiles\exec\ctags.exe'
+endif
 set tags=tags;  " ; 不可省略，表示若当前目录不存在 tags，则在父目录找
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 " ------------- taglist ---------------
