@@ -1,13 +1,16 @@
 vimrc
 =====
 
-我的 vim 配置备份
-
 安装
 ----
 
-- windows: 使用管理员权限执行 `win_install.bat`
-- linux: `$ install.sh`
+- windows: run `win_install.bat` with administrative rights
+- linux: 
+```shell
+$ git clone git@github.com:JackonYang/vimrc.git .vim
+$ cd .vim
+$ install.sh
+```
 
 剪切板
 ------

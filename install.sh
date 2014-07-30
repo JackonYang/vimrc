@@ -2,4 +2,4 @@
 
 rm -f ~/.vimrc
 
-ln _vimrc ~/.vimrc
+ln ~/.vim/_vimrc ~/.vimrc
