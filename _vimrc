@@ -61,8 +61,23 @@ set list
 if has('win32')
     let Tlist_Ctags_Cmd='$HOME\vimfiles\exec\ctags.exe'
 endif
-set tags=tags;  " ; 不可省略，表示若当前目录不存在 tags，则在父目录找
+set tags=tags;,~/.vim/tags/cpp/tags  " ; 不可省略，表示若当前目录不存在 tags，则在父目录找
+" build tags of your own project with Ctrl-F12
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
+" OmniCppComplete
+let omniCpp_NamespaceSearch = 1
+let OmniCpp_GlobalScopeSearch = 1
+let OmniCpp_ShowAccess = 1
+let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
+let OmniCpp_MayCompleteDot = 1 " autocomplete after .
+let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
+let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
+let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+" automatically open and close the popup menu / preview window
+au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
+set completeopt=menuone,menu,longest,preview
+
 " ------------- taglist ---------------
 let Tlist_Exit_OnlyWindow=1  " exit vim when taglist is last window
 let Tlist_File_Fold_Auto_Close=1  " fold tags of other windows
