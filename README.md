@@ -1,8 +1,13 @@
 vimrc
 =====
 
+
 安装
 ----
+
+```
+$ sudo pip install flake8 jsbeautifier
+```
 
 - windows: run `win_install.bat` with administrative rights
 - linux: 
@@ -26,3 +31,8 @@ python
 1. `<F7>` Flake8 check
 
     let g:flake8_max_complexity=10
+
+JavaScript
+----------
+
+1. `<C-f>` format js file

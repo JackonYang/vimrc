@@ -102,3 +102,8 @@ elseif has('win32')
 endif
 
 autocmd filetype make set noexpandtab
+
+
+" ---------- front-end (JS / CSS / HTML) dev env ------------------
+"  for js
+autocmd FileType javascript noremap <buffer>  <C-f> :!js-beautify -o % %<CR>
