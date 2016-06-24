@@ -28,12 +28,7 @@ if has('mouse')
 endif
 
 " cut, copy
-vnoremap <C-x> "+x
-vnoremap <C-c> "+y
-" paste in normal/insert/command mode
-map <C-v> "+gP
-imap <C-v> <C-R>+
-cmap <C-v> <C-R>+
+set clipboard=unnamed
 
 
 " infomative status line
