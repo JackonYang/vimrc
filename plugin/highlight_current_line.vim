@@ -7,7 +7,7 @@
 " - when 'compatible' is set
 " - the "CursorMoved" autocmd event is not availble.
 
-hi CurrentLine ctermbg=darkgray guibg=darkgray
+hi CurrentLine ctermbg=Darkblue guibg=Darkblue
 
 if exists("g:loaded_highlightCurLine") || &cp || !exists("##CursorMoved")
   finish
