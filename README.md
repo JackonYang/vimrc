@@ -1,6 +1,7 @@
 vimrc
 =====
 
+config for mac
 
 安装
 ----
